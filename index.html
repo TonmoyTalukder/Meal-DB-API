@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal DB</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/mealdb.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-light overflow-auto">
+
+    <header>
+        <h2 class="text-center text-success mt-5 mb-2">Search Your Favorite Food</h2>
+        <h5 class="text-center text-success mt-1 mb-4"> <span class="text-danger fs-2 text">&</span> Get the
+            instructions to
+            cook</h5>
+    </header>
+
+    <main class="mb-5 mx-3 px-3 pb-5">
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content border-0 bg-transparent">
+
+                        <!-- Single Meal Details -->
+                        <div id="meal-details" class="mx-2 mt-1">
+
+                        </div>
+                        <div class="d-flex justify-content-center my-1">
+                            <button type="button" class="btn btn-secondary border border-warning text-danger"
+                                data-bs-dismiss="modal"><b>Close</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Page Loading -->
+            <div id="loading">
+                <img id="loading-image" src="images/loading-white.gif" alt="Loading..." />
+            </div>
+
+
+            <!-- Meal Search Area -->
+            <div class="input-group my-3 w-50 mx-auto row gx-1">
+                <div class="col">
+                    <div class="p-0"><input id="search-field" type="text" class="form-control"
+                            placeholder="Search the food you want!!" aria-label="Recipient's username"
+                            aria-describedby="button-addon2"></div>
+                </div>
+                <div class="col-1">
+                    <button onclick="searchFood()" class="btn btn-outline-secondary" type="button"
+                        id="button-search">Search</button>
+                </div>
+            </div>
+
+            <!-- Empty Message Show -->
+            <div id="empty-message">
+            </div>
+
+            <!-- Error Message Show -->
+            <div>
+                <p id="error-message" class="text-danger text-center">Something went wrong please try again later.</p>
+            </div>
+
+            <!-- Meal Search Result -->
+            <div id="search-result" class="row row-cols-1  row-cols-md-3 d-flex justify-content-center g-4"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </div>
+        </section>
+    </main>
+
+    <footer class="row justify-content-center mt-5 mb-2 pt-5">
+        <hr class="mt-5 pt-1" style="height: 10%; width:50%;text-align:left;margin-left:0">
+        <p class="text-center text-muted">
+            <br> API Based Website <br> &copy; 2021, Tonmoy
+        </p>
+    </footer>
+
+    <!-- Js Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/mealdb.js"></script>
+</body>
+
+</html>
